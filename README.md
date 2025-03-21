@@ -27,3 +27,9 @@ npm run dev
 ```bash
 npm run build-win
 ```
+
+# Docker
+## Image bauen
+```bash
+docker build -t fada:1.0 .
+```
