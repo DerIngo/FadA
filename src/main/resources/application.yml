@@ -19,6 +19,7 @@ mail:
   recipients:
     - recipient1@example.com
     - recipient2@example.com
+  link: https://www.myhomepage.de
 
 spring:
   datasource:

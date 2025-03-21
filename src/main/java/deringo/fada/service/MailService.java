@@ -42,7 +42,7 @@ public class MailService {
           String title        = entry.getTitle();
           String pubDate      = germanFormat.format(entry.getPubDate());
           String description  = entry.getDescription();
-          String link         = "<a href=\"https://kabango.eu/fada/\">Link</a>";
+          String link         = "<a href=\""+ mailConfig.getLink() +"\">Link</a>";
           body = title + "<br/><br/>" + pubDate + "<br/><br/>" + description + "<br/><br/>" + link;
         } catch (Exception e) {
           body = body + e.toString();
