@@ -23,7 +23,7 @@ function App() {
         {articles.map((podcast, index) => (
           <li key={index}>
             <strong>{podcast.title}</strong><br />
-            <small>{podcast.pubDate.toLocaleDateString("de-DE")}&nbsp;<a href={`${import.meta.env.BASE_URL}/files/${podcast.filename}`}>Datei</a></small>
+            <small>{podcast.pubDate.toLocaleDateString("de-DE")}&nbsp;<a href={`files/${podcast.filename}`}>Datei</a></small>
           </li>
         ))}
       </ul>
