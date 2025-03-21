@@ -7,3 +7,5 @@
 /application.yml
 /database/.env
 /audio/*
+
+/src/main/resources/static
