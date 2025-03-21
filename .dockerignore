@@ -1,0 +1,25 @@
+# Allgemeine Ausschlüsse
+node_modules
+target
+audio
+backup
+logs
+.settings
+
+# Sonstige Ausschlüsse
+.git
+*.log
+.DS_Store
+
+# Frontend-Dev-Zeug
+frontend/.next
+frontend/dist
+
+# IDE-Dateien (Eclipse)
+.classpath
+.project
+.gitignore
+.dockerignore
+
+# Konfiguration, die nicht ins Image gehört
+application.yml

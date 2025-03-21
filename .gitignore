@@ -1,0 +1,9 @@
+/target/
+.classpath
+.project
+.settings
+
+/logs/*
+/application.yml
+/database/.env
+/audio/*

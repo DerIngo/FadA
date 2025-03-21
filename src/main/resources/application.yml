@@ -1,0 +1,53 @@
+configuration: resources
+
+audioFilePath: audio/
+dataFile: data_ROME.xml
+currentUrl: http://pcast.sr-online.de/feeds/fragen/feed.xml
+historyUrl: http://pcast.sr-online.de/feeds/sr2-fragen-klassiker/feed.xml
+saveMP3: true
+sendEMail: true
+
+scheduling:
+  task:
+    cron: "0 0 10 ? * *"     # Jeden Tag um 10:00 Uhr
+    zone: "Europe/Berlin"    # Zeitzone
+
+mail:
+  sender:
+    email: sender@example.com
+    name: Sender Name
+  recipients:
+    - recipient1@example.com
+    - recipient2@example.com
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fada
+    username: fada
+    password: PASSWORD
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      globally_quoted_identifiers: true
+      type_mappings:
+        string: text
+    show-sql: false
+  mail:
+    host: host
+    port: 587
+    username: username
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+logging:
+  level:
+    root: INFO
+    deringo.fada.FadAFetcherService: INFO
+  file:
+    path: ./logs
