@@ -25,7 +25,6 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-            // nix zu tun hier
             String key = "configuration";
             System.out.println(String.format("Value of '%s' is '%s'", key, env.getProperty(key)));
         };
