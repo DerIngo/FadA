@@ -23,7 +23,7 @@ export interface Podcast {
 // API-Funktion zum Laden der Artikel
 export async function fetchPodcasts(): Promise<Podcast[]> {
   try {
-    const response = await axios.get("http://localhost:8080/api/feed");
+    const response = await axios.get("/api/feed");
     return response.data.map((podcast: Podcast) => ({
           ...podcast,
           pubDate: new Date(podcast.pubDate), // Umwandlung hier
